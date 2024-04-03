@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.2.1/browser/pixi.js
+"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <script>
+      var SMALL_CANVAS_SIZE = 51;
+      var LARGE_CANVAS_SIZE = 512;
+      var BG_COLOR_HEX = "#D9FFEC";
+      var BG_COLOR_HEXCODE = 0xd9ffec;
+
+      function resizeWithCSS(cnv) {
+        cnv.style = `width: ${LARGE_CANVAS_SIZE}px; height: ${LARGE_CANVAS_SIZE}px`;
+      }
+      function resizeWithCSSPixelated(cnv) {
+        resizeWithCSS(cnv);
+        cnv.className = "pixelated-rendering";
+      } 
+    </script>
+  </head>
+  <body>
+    <main>
+      <table>
+      <tr>
+        <td>renderer</td>
+        <td>small</td>
+        <td>scaled</td>
+        <td>scaled, css image-rendering: pixelated</td>
+      </tr>
+      <tr>
+        <td>p5.js</td>
+        <td id="p5js-1"></td>
+        <td id="p5js-2"></td>
+        <td id="p5js-3"></td>
+      </tr>
+      <tr>
+        <td>p5.js WEBGL mode</td>
+        <td id="p5js-webgl-1"></td>
+        <td id="p5js-webgl-2"></td>
+        <td id="p5js-webgl-3"></td>
+      </tr>
+      <tr>
+        <td>canvas api</td>
+        <td id="cnv-1"></td>
+        <td id="cnv-2"></td>
+        <td id="cnv-3"></td>
+      </tr>
+      <tr>
+        <td>pixi</td>
+        <td id="pixi-1"></td>
+        <td id="pixi-2"></td>
+        <td id="pixi-3" ></td>
+      </tr>
+    </table>
+    </main>
+    <script src="sketch.js"></script>
+<!--     <script src="p5-draw.js"></script> -->
+    <script src="p5webgl-draw.js"></script>
+<!--     <script src="cnv-draw.js"></script> -->
+    <script src="pixi-draw.js"></script>
+  </body>
+</html>

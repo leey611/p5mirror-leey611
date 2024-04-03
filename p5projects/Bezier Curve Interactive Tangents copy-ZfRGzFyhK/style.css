@@ -1,0 +1,26 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+}
+
+canvas {
+  display: block;
+}
+
+p {
+  margin: 0em 0em 0em 0em;
+  padding: 0;
+}
+
+h1 {
+  margin:0;
+}
+
+div {
+  display: flex;
+}

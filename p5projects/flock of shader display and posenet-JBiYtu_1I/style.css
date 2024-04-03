@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow: hidden
+}
+
+canvas::-webkit-scrollbar, html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none;
+}

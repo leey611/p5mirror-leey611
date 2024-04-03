@@ -1,0 +1,196 @@
+/*
+Serial communitaion with Arduino 
+by Yeseul for Physical Computing, 2022
+
+This is a boiler plate for using webserial.
+Duplicat this sketch and start adding your code to "CUSTOMIZE" part 
+to make your serial communication project to use with your Arduino sketch.
+
+
+The serial communication part is based on 
+https://itp.nyu.edu/physcomp/labs/labs-serial-communication/lab-webserial-input-to-p5-js/
+*/
+
+// variable to hold an instance of the p5.webserial library:
+const serial = new p5.WebSerial();
+
+// port chooser button:
+let portButton;
+let sensor1 = 0
+//let sensor2 = 0
+
+// CUSTOMIZE: change/add variable for incoming serial data:
+let inData;
+
+// Variables for bird UI
+let oxygenBar
+let startOxygen = 50
+
+let birdImg
+let backgroundImg
+let o2Img
+let startscreenImg
+let endscreenImg
+let showStartScreen = true
+
+const o2ImgHeight = 200
+let isAddingOx = false
+let timer
+let gameIsEnd = false
+
+function setup() {
+   // check to see if serial is available:
+   if (!navigator.serial) {
+    alert("WebSerial is not supported in this browser. Try Chrome or MS Edge.");
+  } else {
+    alert("WebSerial is supported. Enjoy!");
+  }
+  // check to see if serial is available:
+   if (!navigator.serial) {
+    alert("WebSerial is not supported in this browser. Try Chrome or MS Edge.");
+  }
+  // check for any ports that are available:
+  serial.getPorts();
+  // if there's no port chosen, choose one:
+  serial.on("noport", makePortButton);
+  // open whatever port is available:
+  serial.on("portavailable", openPort);
+  // handle serial errors:
+  serial.on("requesterror", portError);
+  // handle any incoming serial data:
+  serial.on("data", serialEvent);
+  serial.on("close", makePortButton)
+ 
+  // add serial connect/disconnect listeners from WebSerial API:
+  navigator.serial.addEventListener("connect", portConnect);
+  navigator.serial.addEventListener("disconnect", portDisconnect);
+  createCanvas(windowWidth, windowHeight);
+  oxygenBar = new OxygenBar(width/2 - 150, 280 + o2ImgHeight, 50, startOxygen)
+  birdImg = loadImage('images/bird.png')
+  backgroundImg = loadImage('images/mining.png')
+  o2Img = loadImage('images/o2bar.png'); 
+  startscreenImg = loadImage('images/startscreen.png')
+  endscreenImg = loadImage('images/endscreen.png')
+}
+
+// if there's no port selected, 
+// make a port select button appear:
+function makePortButton() {
+  // create and position a port chooser button:
+  portButton = createButton('choose port');
+  portButton.position(10, 10);
+  // give the port button a mousepressed handler:
+  portButton.mousePressed(choosePort);
+}
+ 
+// make the port selector window appear:
+function choosePort() {
+  if (portButton) portButton.show();
+  serial.requestPort();
+}
+ 
+// open the selected port, and make the port 
+// button invisible:
+function openPort() {
+  // wait for the serial.open promise to return,
+  // then call the initiateSerial function
+  let options = { baudrate: 9600}; 
+  serial.open().then(initiateSerial);
+ 
+  // once the port opens, let the user know:
+  function initiateSerial() {
+    console.log("port open");
+  }
+  // hide the port button once a port is chosen:
+  if (portButton) portButton.hide();
+}
+ 
+// pop up an alert if there's a port error:
+function portError(err) {
+  alert("Serial port error: " + err);
+}
+// read any incoming data as a string
+// (assumes a newline at the end of it):
+function serialEvent() {
+  
+  // CUSTOMIZE: add your code for receiving/sending data over serial  
+  let stringFromSerial = serial.readString()
+  if (stringFromSerial != null) {
+    let value_array = stringFromSerial.trim().split(',')
+    //console.log(value_array[0])
+    //sensor1 = Number(stringFromSerial)
+    sensor1 = int(value_array[0])
+    showStartScreen = sensor1 === 1 ? false : true
+    isAddingOx = sensor1 === 1
+    if (timer) {
+      clearTimeout(timer)
+    }
+    timer = setTimeout(()=> {
+      isAddingOx = false
+    }, 1000)
+    //sensor2 = int(value_array[1])
+  }
+   //serial.print(oxygenBar.barHeight)
+  
+}
+ 
+// try to connect if a new serial port 
+// gets added (i.e. plugged in via USB):
+function portConnect() {
+  console.log("port connected");
+  serial.getPorts();
+}
+ 
+// if a port is disconnected:
+function portDisconnect() {
+  serial.close();
+  console.log("port disconnected");
+}
+ 
+function closePort() {
+  serial.close();
+}
+
+function mousePressed() {
+  serial.print(oxygenBar.barHeight)
+}
+
+
+function draw() {
+  background(220);
+  //image(birdImg,0,0)
+  image(backgroundImg,0,0, windowWidth, windowHeight)
+  image(o2Img,width/2 - 200, 280, 150,o2ImgHeight)
+  
+  // CUSTOMIZE: add your code for receiving/sending data over serial  
+
+  oxygenBar.show()
+  oxygenBar.update()
+  //console.log('sensor',sensor1)
+  
+ 
+  
+  if(isAddingOx) {
+  
+    //ellipse(width/2, height/2, 50)
+    oxygenBar.addOxygen()
+  }
+    serial.write(oxygenBar.barHeight)
+  showStartScreen = oxygenBar.barHeight <= 10 ? true:false
+  
+  if (showStartScreen) {
+    push()
+    imageMode(CENTER)
+    image(startscreenImg, width/2, height/2, 250,250)
+    pop()
+  }
+  
+  if (oxygenBar.barHeight >= 150) {
+    push()
+    imageMode(CENTER)
+    image(endscreenImg, width/2, height/2, 250,250)
+    pop()
+  } 
+     
+}
+

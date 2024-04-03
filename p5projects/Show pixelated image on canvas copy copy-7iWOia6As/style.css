@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* canvas {
+  display: block;
+  image-rendering: pixelated;
+} */
+
+canvas.Retro {
+  width: 384px !important;
+  height: 384px !important;
+  display: block;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/*
+canvas.p5Canvas {
+  width: 384px !important;
+  height: 384px !important;
+  display: block;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: crisp-edges;
+} */

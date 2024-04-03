@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+p , table {
+  margin: 24px;
+}
+table {
+  border-collapse: collapse;
+}
+
+table tr td {
+  border: 1px solid rgb(200,200,200);
+  padding: 12px;
+  vertical-align: top;
+}
+
+table tr:first-child td,
+table tr td:first-child {
+  background: white;
+}
+
+canvas {
+  display: block;
+  border: 1px solid black;
+}
+
+.pixelated-rendering  {
+/*     image-rendering: optimizeSpeed; */
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+}

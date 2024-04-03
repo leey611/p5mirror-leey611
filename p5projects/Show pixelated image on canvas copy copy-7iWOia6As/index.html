@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+    
+    <canvas id="game" class="Retro" width="128" height="128"></canvas>
+    <script>
+      // get canvas context
+      var ctx = document.getElementById('game').getContext('2d');
+      
+      // load image
+      var img = new Image();
+      img.onload = function () {
+          // draw the image into the canvas
+          ctx.drawImage(img, 0, 0);
+      }
+      img.src = 'cat.png';
+      </script>
+  </body>
+</html>

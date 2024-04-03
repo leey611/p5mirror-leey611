@@ -16,6 +16,8 @@ bin/mirror.sh --user p5name
 
 # and then commit changes in github desktop
 
+bin/mirror.sh --user leey611
+
 ```
 
 ## Why ?

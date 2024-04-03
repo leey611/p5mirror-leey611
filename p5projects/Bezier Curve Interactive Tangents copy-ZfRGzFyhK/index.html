@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <h1>B&#233;zier Curve with p5js</h1>
+    <p>Click and drag the points to adjust the bezier curve.</p> 
+    <p>Click anywhere to add a new point.</p>  
+    <p>CTRL + Z to remove last created point.</p>
+    <p>Upload an image to draw over it!</p>
+    <button id="edit" onclick="enableEdit()">Edit Mode</button>
+    <button id="image" onclick="backImage()">Show Image</button>
+    <button id="tangent" onclick="toggleTangent()">Smooth</button>
+    <input accept=".png, .jpg, .jpeg" type="file" id="upload" onchange="handleFile()">
+    <p>Thickness</p>
+    <input type="range" min="10" max="500" class="slider" value="20">
+    <p>Line Color</p>
+    <div>
+    <p>R</p>
+    <input type="range" min="0" max="255" class="redSlider" value="0">
+    <p>G</p>
+    <input type="range" min="0" max="255" class="greenSlider" value="0">
+    <p>B</p>
+    <input type="range" min="0" max="255" class="blueSlider" value="0">
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
