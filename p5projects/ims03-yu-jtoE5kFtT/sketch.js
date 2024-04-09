@@ -1,6 +1,3 @@
-// https://editor.p5js.org/leey611/sketches/T5zVm6jEl
-// ims02-yu
-
 let my = {};
 
 let palette = "c2f970-44344f-564d80-98a6d4-d3fcd5"
@@ -15,6 +12,8 @@ let flowfield;
 const golden_ratio_conjugate = 0.618033988749895;
 let h = Math.random();
 
+let urlParams
+
 function setup() {
   my.width = 900;
   my.height = 900;
@@ -28,6 +27,10 @@ function setup() {
   // my.fullScreenBtn = 0;
   my.startTime = 0;
   my.changeTime = 1.0;
+  
+  urlParams = get_url_params();
+  
+  console.log('urlParams', urlParams);
 
   if (!my.debug) {
     my.width = windowWidth;
@@ -87,6 +90,27 @@ function draw() {
   // describe("Update and display particles");
 }
 
+function get_url_params() {
+  let query = window.location.search;
+  // console.log('query |' + query + '|');
+  console.log('query.length', query.length);
+  if (query.length < 1) return null;
+  let params = params_query(query);
+  return params;
+  // let store = params['store'];
+  // console.log('nstore', store);
+  // return store;
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+function params_query(query) {
+  // eg. query='abc=foo&def=%5Basf%5D&xyz=5'
+  // params={abc: "foo", def: "[asf]", xyz: "5"}
+  const urlParams = new URLSearchParams(query);
+  const params = Object.fromEntries(urlParams);
+  return params;
+}
+
 function new_pos() {
   my.xpos = random(0, width);
   my.ypos = random(0, height);
@@ -119,6 +143,8 @@ function full_screen_action() {
 function ui_present_window() {
   resizeCanvas(windowWidth, windowHeight);
   background("#c3c3c3");
+  if (urlParams?.v) background("#000");
+    
   h = Math.random()
   //setInterval(makeNewFlowField,5000)
   makeNewFlowField()
@@ -127,6 +153,7 @@ function ui_present_window() {
 
 function makeNewFlowField(newH) {
   background("#c3c3c3");
+  if (urlParams?.v) background("#000");
   strokeCap(SQUARE);
   cols = floor(width / scl);
   rows = floor(height / scl);
@@ -163,7 +190,7 @@ function Particle(pos) {
   this.vel = createVector(0, 0); //p5.Vector.random2D()//
   this.acc = createVector(0, 0);
   this.sw = random() > 0.1 ? random(1, 4) : random(40);
-  this.clr = color(...hsvToRgb(h, 0.6, 0.95));
+  this.clr = urlParams?.v ? color(random(['red', 'green', [187, 165, 61], 'black'])) : color(...hsvToRgb(h, 0.6, 0.95));
   this.maxspeed = 1.3;
 
   // describe(
@@ -282,6 +309,6 @@ function mousePressed() {
 // https://editor.p5js.org/jht9629-nyu/sketches/3VKJ-q8ar
 // ims03-jht scrolling color bars
 
-// forked and modified from https://editor.p5js.org/jht9629-nyu/sketches/Mpgun-Kti
-// https://openprocessing.org/sketch/2135015
-// ims black-n white-1 bounce
+// forked and modified from 
+// https://editor.p5js.org/leey611/sketches/T5zVm6jEl
+// ims02-yu
