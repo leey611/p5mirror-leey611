@@ -1,3 +1,7 @@
+// https://editor.p5js.org/leey611/sketches/jtoE5kFtT
+// ima03-yu
+// https://leey611.github.io/p5mirror-leey611/p5projects/ims03-yu-jtoE5kFtT/?v=1
+
 let my = {};
 
 let palette = "c2f970-44344f-564d80-98a6d4-d3fcd5"

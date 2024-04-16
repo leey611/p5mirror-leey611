@@ -6,13 +6,6 @@ mkdir "./ims03-yu-jtoE5kFtT"
 pushd "./ims03-yu-jtoE5kFtT" > /dev/null
 unzip -q "../../downloads/zips/ims03-yu-jtoE5kFtT"
 popd > /dev/null
-#
-echo unzip 2 "ims02-yu-T5zVm6jEl"
-rm -rf "./ims02-yu-T5zVm6jEl"
-mkdir "./ims02-yu-T5zVm6jEl"
-pushd "./ims02-yu-T5zVm6jEl" > /dev/null
-unzip -q "../../downloads/zips/ims02-yu-T5zVm6jEl"
-popd > /dev/null
 
 cd ..
 # remove redundant p5.js p5.sound.min.js
