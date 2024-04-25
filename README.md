@@ -20,6 +20,14 @@ bin/mirror.sh --user leey611
 
 ```
 
+## Your mirror here
+
+```
+# Edit this line for your editor.p5js user name
+bin/mirror.sh --user p5name
+
+```
+
 ## Why ?
 
 mirror your editor.p5js sketches into a git repo
@@ -46,17 +54,32 @@ Generated listing of editor.p5js projects
 
 - https://nodejs.org/en/download
 
+### For Microsoft Windows OS
+
+- these scripts require bash shell
+- test on macos
+- for Windows try:
+  - [how-do-i-use-bash-on-windows](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal)
+
 ## Recommended apps
 
 - https://code.visualstudio.com/
 
 - https://desktop.github.com/
 
-### VS Code extensions
+## VS Code extensions
 
 - https://marketplace.visualstudio.com/items?itemName=samplavigne.p5-vscode
 
 - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+
+## p5mirrorLib
+
+- p5mirrorLib repo is used instally by this repo
+
+- [github p5mirrorLib](https://github.com/molab-itp/p5mirrorLib.git)
+
+- Use p5mirrorLib repo directly to keep your sketches in sync with your editor.p5js account.
 
 ## Usage
 
