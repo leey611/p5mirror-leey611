@@ -2,3 +2,4 @@
 node_modules
 downloads/zips
 p5mirrorLib
+.env

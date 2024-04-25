@@ -2138,6 +2138,96 @@
     "id": "KeZsxTOF6"
   },
   {
+    "name": "Handpose Drawing simplified copy",
+    "_id": "osuk-kpKl",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "662a88cb0d40ffd50fbf412d",
+          "662a88cb0d40ffd50fbf412e"
+        ],
+        "fileType": "folder",
+        "_id": "662a88cb0d40ffd50fbf412c",
+        "isSelectedFile": false,
+        "createdAt": "2024-04-25T16:47:14.745Z",
+        "updatedAt": "2024-04-25T16:47:14.745Z",
+        "id": "662a88cb0d40ffd50fbf412c"
+      },
+      {
+        "name": "sketch.js",
+        "content": "// Pointer finger to draw or pick color; flat \"stop\" hand to move pointer.  If it's having trouble tracking your finger, either change your background or try including your middle finger with your pointer finger.\n//Handpose code by the ml5.js team.  Visit https://ml5js.org/\n// Drawing code by Steve's Makerspace\n// Video: https://youtu.be/96sWFP9CCkQ\n\nlet handpose;\nlet video;\nlet predictions = [];\nlet canvas2;\nlet prevtop = null;\nlet prevleft = null;\nlet leftArr = [];\nlet topArr = [];\nlet leftAvg, topAvg;\nlet colr = 0;\nlet colb = 255;\nlet colg = 0;\nlet pointerX, pointerY, knuckle, ring;\n\nfunction setup() {\n  createCanvas(640, 480);\n  canvas2 = createGraphics(width, height);\n  video = createCapture(VIDEO);\n  video.size(width, height);\n\n  handpose = ml5.handpose(video, modelReady);\n\n  // This sets up an event that fills the global variable \"predictions\"\n  // with an array every time new hand poses are detected\n  handpose.on(\"predict\", (results) => {\n    predictions = results;\n  });\n\n  // Hide the video element, and just show the canvas\n  video.hide();\n}\n\nfunction modelReady() {\n  console.log(\"Model ready!\");\n}\n\nfunction draw() {\n  translate(width, 0);\n  scale(-1, 1);\n  //  background(0);\n\n  image(video, 0, 0, width, height);\n  image(canvas2, 0, 0);\n\n  // We can call both functions to draw all keypoints and the skeletons\n  drawKeypoints();\n}\n\n// A function to draw ellipses over the detected keypoints\nfunction drawKeypoints() {\n  for (let i = 0; i < predictions.length; i += 1) {\n    const prediction = predictions[i];\n    canvas2.strokeWeight(10);\n    for (let j = 0; j < prediction.landmarks.length; j += 1) {\n      const keypoint = prediction.landmarks[j];\n      //fill(\"orange\")\n      fill(0, 255, 0);\n      noStroke();\n      //   ellipse(keypoint[0], keypoint[1], 10, 10);\n      if (j == 8) {\n        pointerX = keypoint[0];\n        pointerY = keypoint[1];\n        //print(keypoint);\n      } else\n      if (j == 14) {\n        knuckle = keypoint[1];\n      } else\n      if (j == 16) {\n        ring = keypoint[1];\n      }\n    }\n    //If the ring finger is not extended then draw a line\n    if (knuckle < ring) {\n      fill(0);\n      ellipse(pointerX, pointerY, 10, 10);\n      if (pointerX < width - 70) {\n        getaverages();\n        canvas2.stroke(\"orange\")\n        //canvas2.stroke(colr, colg, colb);\n        if (leftArr.length > 2 && prevleft>0) {\n          canvas2.line(prevleft, prevtop, leftAvg, topAvg);\n          if (prevleft > 0) {\n          prevleft = leftAvg;\n          prevtop = topAvg;}\n          else{\n            prevleft = pointerX;\n            prevtop = pointerY;\n          }\n        }\n      } \n    } else {\n      //If the hand is extended, then just mark where it is and clear the arrays\n      fill(255);\n      ellipse(pointerX, pointerY, 10, 10);\n      leftArr.length = 0;\n      topArr.length = 0;\n      leftAvg = 0;\n      topAvg = 0;\n      prevleft = pointerX;\n      prevtop = pointerY;\n    }\n  }\n}\n\nfunction getaverages() {\n  if (leftArr.length > 5) {\n    leftArr.splice(0, 1);\n    topArr.splice(0, 1);\n  }\n  if (pointerX > 0 ) {\n  leftArr.push(pointerX);\n  topArr.push(pointerY);\n  }\n  let leftSum = 0;\n  let topSum = 0;\n  for (i = 0; i < leftArr.length; i++) {\n    leftSum = leftSum + leftArr[i];\n    topSum = topSum + topArr[i];\n  }\n  leftAvg = leftSum / leftArr.length;\n  topAvg = topSum / topArr.length;\n  \n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "662a88cb0d40ffd50fbf412e",
+        "isSelectedFile": true,
+        "createdAt": "2024-04-25T16:47:14.745Z",
+        "updatedAt": "2024-04-25T16:47:14.745Z",
+        "id": "662a88cb0d40ffd50fbf412e"
+      },
+      {
+        "name": "index.html",
+        "content": "<html>\n  <head>\n    <meta charset=\"UTF-8\" />\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js\"></script>\n    <script src=\"https://unpkg.com/ml5@latest/dist/ml5.min.js\" type=\"text/javascript\"></script>\n  </head>\n  <body>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "662a88cb0d40ffd50fbf412d",
+        "isSelectedFile": false,
+        "createdAt": "2024-04-25T16:47:14.745Z",
+        "updatedAt": "2024-04-25T16:47:14.745Z",
+        "id": "662a88cb0d40ffd50fbf412d"
+      }
+    ],
+    "createdAt": "2024-04-25T16:46:03.267Z",
+    "updatedAt": "2024-04-25T16:47:14.745Z",
+    "id": "osuk-kpKl"
+  },
+  {
+    "name": "Handpose Drawing simplified noelle",
+    "_id": "QjcYG1DPu",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "662a86293f7916489113d9bc",
+          "662a86293f7916489113d9bd"
+        ],
+        "fileType": "folder",
+        "_id": "662a86293f7916489113d9bb",
+        "isSelectedFile": false,
+        "createdAt": "2024-04-25T17:05:18.094Z",
+        "updatedAt": "2024-04-25T17:05:18.094Z",
+        "id": "662a86293f7916489113d9bb"
+      },
+      {
+        "name": "sketch.js",
+        "content": "// Pointer finger to draw or pick color; flat \"stop\" hand to move pointer.  If it's having trouble tracking your finger, either change your background or try including your middle finger with your pointer finger.\n//Handpose code by the ml5.js team.  Visit https://ml5js.org/\n// Drawing code by Steve's Makerspace\n// Video: https://youtu.be/96sWFP9CCkQ\n\n// vars for handtracking\nlet handpose;\nlet video;\nlet predictions = [];\nlet canvas2;\nlet prevtop = null;\nlet prevleft = null;\nlet leftArr = [];\nlet topArr = [];\nlet leftAvg, topAvg;\nlet colr = 0;\nlet colb = 255;\nlet colg = 0;\nlet pointerX, pointerY, knuckle, ring;\n\n// vars for sands\nlet lineSegments = [];\nlet sandGenerating = false;\n\nfunction make2DArray(cols, rows) {\n  let arr = new Array(cols);\n  for (let i = 0; i < arr.length; i++) {\n    arr[i] = new Array(rows);\n    // Fill the array with 0s\n    for (let j = 0; j < arr[i].length; j++) {\n      arr[i][j] = 0;\n    }\n  }\n  return arr;\n}\n\n// The grid\nlet grid;\n// How big is each square?\nlet w = 4;\nlet cols, rows;\nlet gravity;\n\n// Check if a row is within the bounds\nfunction withinCols(i) {\n  return i >= 0 && i <= cols - 1;\n}\n\n// Check if a column is within the bounds\nfunction withinRows(j) {\n  return j >= 0 && j <= rows - 1;\n}\n\nfunction setup() {\n  createCanvas(640, 480);\n  canvas2 = createGraphics(width, height);\n  video = createCapture(VIDEO);\n  video.size(width, height);\n\n  handpose = ml5.handpose(video, modelReady);\n\n  // This sets up an event that fills the global variable \"predictions\"\n  // with an array every time new hand poses are detected\n  handpose.on(\"predict\", (results) => {\n    predictions = results;\n  });\n\n  // Hide the video element, and just show the canvas\n  video.hide();\n  // create grid\n  cols = floor(width / w);\n  rows = floor(height / w);\n  grid = make2DArray(cols, rows);\n}\n\nfunction modelReady() {\n  console.log(\"Model ready!\");\n}\n\nfunction draw() {\n  translate(width, 0);\n  scale(-1, 1);\n  //  background(0);\n\n  //image(video, 0, 0, width, height);\n  \n  // code for CA\n  if (sandGenerating) {\n    let mouseCol = floor(cols / 2); // Middle column position\n    let mouseRow = 0; // Top row position\n\n    // Randomly add an area of sand particles\n    let matrix = 1; // Set matrix width to 1\n    let extent = floor(matrix / 2);\n    for (let i = -extent; i <= extent; i++) {\n      for (let j = -extent; j <= extent; j++) {\n        if (random(1) < 0.75) {\n          let col = mouseCol + i;\n          let row = mouseRow + j;\n          if (withinCols(col) && withinRows(row)) {\n            grid[col][row] = 1;\n          }\n        }\n      }\n    }\n  }\n\n  stroke('green');\n  strokeWeight(2);\n  for (let i = 0; i < lineSegments.length; i++) {\n    line(\n      lineSegments[i].x1,\n      lineSegments[i].y1,\n      lineSegments[i].x2,\n      lineSegments[i].y2\n    );\n  }\n  // Draw the sand\n  for (let i = 0; i < cols; i++) {\n    for (let j = 0; j < rows; j++) {\n      noStroke();\n      if (grid[i][j] == 1) {\n        fill('pink');\n        let x = i * w;\n        let y = j * w;\n        square(x, y, w);\n      } else if (grid[i][j] == 2) {\n        fill(255, 0, 0);\n        let x = i * w;\n        let y = j * w;\n        square(x, y, w);\n      }\n    }\n  }\n\n  // Create a 2D array for the next frame of animation\n  let nextGrid = make2DArray(cols, rows);\n  // new grid needs all the obstacles\n  for (let i = 0; i < cols; i++) {\n    for (let j = 0; j < rows; j++) {\n      let state = grid[i][j];\n      if (state == 2) {\n        nextGrid[i][j] = 2;\n      }\n    }\n  }\n\n  // Check every cell\n  for (let i = 0; i < cols; i++) {\n    for (let j = 0; j < rows; j++) {\n      // What is the state?\n      let state = grid[i][j];\n\n      // If it's a piece of sand!\n      if (state == 1) {\n        // What is below?\n        let below = grid[i][j + 1];\n\n        // Randomly fall left or right\n        let dir = 1;\n        if (random(1) < 0.5) {\n          dir *= -1;\n        }\n\n        // Check below left or right\n        let belowA = -1;\n        let belowB = -1;\n        if (withinCols(i + dir)) {\n          belowA = grid[i + dir][j + 1];\n        }\n        if (withinCols(i - dir)) {\n          belowB = grid[i - dir][j + 1];\n        }\n\n        // Can it fall below or left or right?\n        if (below === 0) {\n          nextGrid[i][j + 1] = state;\n        } else if (belowA === 0) {\n          nextGrid[i + dir][j + 1] = state;\n        } else if (belowB === 0) {\n          nextGrid[i - dir][j + 1] = state;\n          // Stay put!\n        } else {\n          nextGrid[i][j] = state;\n        }\n      }\n    }\n  }\n  grid = nextGrid;\n  \n  \n  image(canvas2, 0, 0);\n\n  // We can call both functions to draw all keypoints and the skeletons\n  drawKeypoints();\n}\n\n// A function to draw ellipses over the detected keypoints\nfunction drawKeypoints() {\n  for (let i = 0; i < predictions.length; i += 1) {\n    const prediction = predictions[i];\n    canvas2.strokeWeight(10);\n    for (let j = 0; j < prediction.landmarks.length; j += 1) {\n      const keypoint = prediction.landmarks[j];\n      fill(0, 255, 0);\n      noStroke();\n      //   ellipse(keypoint[0], keypoint[1], 10, 10);\n      if (j == 8) {\n        pointerX = keypoint[0];\n        pointerY = keypoint[1];\n        //print(keypoint);\n      } else\n      if (j == 14) {\n        knuckle = keypoint[1];\n      } else\n      if (j == 16) {\n        ring = keypoint[1];\n      }\n    }\n    //If the ring finger is not extended then draw a line\n    if (knuckle < ring) {\n        \n      \n      fill(0);\n      ellipse(pointerX, pointerY, 10, 10);\n      if (pointerX < width - 70) {\n        getaverages();\n\n        canvas2.stroke(colr, colg, colb); // this is where the finger draws\n        if (leftArr.length > 2 && prevleft>0) {\n          canvas2.line(prevleft, prevtop, leftAvg, topAvg);\n          if (prevleft > 0) {\n          prevleft = leftAvg;\n          prevtop = topAvg;}\n          else{\n            prevleft = pointerX;\n            prevtop = pointerY;\n          }\n        }\n      } \n      \n    } else {\n      //If the hand is extended, then just mark where it is and clear the arrays\n      fill('yellow');\n      ellipse(pointerX, pointerY, 10, 10);\n      leftArr.length = 0;\n      topArr.length = 0;\n      leftAvg = 0;\n      topAvg = 0;\n      prevleft = pointerX;\n      prevtop = pointerY;\n    }\n  }\n}\n\nfunction getaverages() {\n  if (leftArr.length > 5) {\n    leftArr.splice(0, 1);\n    topArr.splice(0, 1);\n  }\n  if (pointerX > 0 ) {\n  leftArr.push(pointerX);\n  topArr.push(pointerY);\n  }\n  let leftSum = 0;\n  let topSum = 0;\n  for (i = 0; i < leftArr.length; i++) {\n    leftSum = leftSum + leftArr[i];\n    topSum = topSum + topArr[i];\n  }\n  leftAvg = leftSum / leftArr.length;\n  topAvg = topSum / topArr.length;\n  \n}\n\nfunction fingerDrawLine() {\n  sandGenerating = true;\n\n  let start = createVector(pmouseX, pmouseY);\n  let end = createVector(mouseX, mouseY);\n\n  // Calculate the direction vector\n  let direction = p5.Vector.sub(end, start);\n  direction.normalize();\n\n  // Calculate the distance between start and end points\n  let distance = p5.Vector.dist(start, end);\n\n  // Set the step size to ensure points are densely packed along the vector\n  let step = 0.02; // Adjust as needed\n\n  // Iterate along the direction vector\n  for (let d = 0; d < distance; d += step) {\n    let current = p5.Vector.add(start, p5.Vector.mult(direction, d));\n    let col = floor(current.x / w);\n    let row = floor(current.y / w);\n    grid[col][row] = 2;\n  }\n\n  // where the mouse was\n  let col = floor(mouseX / w);\n  let row = floor(mouseY / w);\n  grid[col][row] = 2;\n}\n\n\nfunction mouseDragged() {\n  sandGenerating = true;\n\n  let start = createVector(pmouseX, pmouseY);\n  let end = createVector(mouseX, mouseY);\n\n  // Calculate the direction vector\n  let direction = p5.Vector.sub(end, start);\n  direction.normalize();\n\n  // Calculate the distance between start and end points\n  let distance = p5.Vector.dist(start, end);\n\n  // Set the step size to ensure points are densely packed along the vector\n  let step = 0.02; // Adjust as needed\n\n  // Iterate along the direction vector\n  for (let d = 0; d < distance; d += step) {\n    let current = p5.Vector.add(start, p5.Vector.mult(direction, d));\n    let col = floor(current.x / w);\n    let row = floor(current.y / w);\n    grid[col][row] = 2;\n  }\n\n  // where the mouse was\n  let col = floor(mouseX / w);\n  let row = floor(mouseY / w);\n  grid[col][row] = 2;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "662a86293f7916489113d9bd",
+        "isSelectedFile": true,
+        "createdAt": "2024-04-25T17:05:18.094Z",
+        "updatedAt": "2024-04-25T17:05:18.094Z",
+        "id": "662a86293f7916489113d9bd"
+      },
+      {
+        "name": "index.html",
+        "content": "<html>\n  <head>\n    <meta charset=\"UTF-8\" />\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js\"></script>\n    <script src=\"https://unpkg.com/ml5@latest/dist/ml5.min.js\" type=\"text/javascript\"></script>\n  </head>\n  <body>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "662a86293f7916489113d9bc",
+        "isSelectedFile": false,
+        "createdAt": "2024-04-25T17:05:18.094Z",
+        "updatedAt": "2024-04-25T17:05:18.094Z",
+        "id": "662a86293f7916489113d9bc"
+      }
+    ],
+    "createdAt": "2024-04-25T16:34:49.480Z",
+    "updatedAt": "2024-04-25T17:05:18.094Z",
+    "id": "QjcYG1DPu"
+  },
+  {
     "name": "HTML workshop",
     "_id": "gSK5X9wQ5k",
     "updatedAt": "2022-11-16T17:56:21.040Z",

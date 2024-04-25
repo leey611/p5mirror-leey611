@@ -1,10 +1,17 @@
 cd "/Users/yu/Documents/itp/jht/p5mirror-leey611/downloads/../p5projects"
 #
-echo unzip 1 "ims03-yu-jtoE5kFtT"
-rm -rf "./ims03-yu-jtoE5kFtT"
-mkdir "./ims03-yu-jtoE5kFtT"
-pushd "./ims03-yu-jtoE5kFtT" > /dev/null
-unzip -q "../../downloads/zips/ims03-yu-jtoE5kFtT"
+echo unzip 1 "Handpose Drawing simplified noelle-QjcYG1DPu"
+rm -rf "./Handpose Drawing simplified noelle-QjcYG1DPu"
+mkdir "./Handpose Drawing simplified noelle-QjcYG1DPu"
+pushd "./Handpose Drawing simplified noelle-QjcYG1DPu" > /dev/null
+unzip -q "../../downloads/zips/Handpose Drawing simplified noelle-QjcYG1DPu"
+popd > /dev/null
+#
+echo unzip 2 "Handpose Drawing simplified copy-osuk-kpKl"
+rm -rf "./Handpose Drawing simplified copy-osuk-kpKl"
+mkdir "./Handpose Drawing simplified copy-osuk-kpKl"
+pushd "./Handpose Drawing simplified copy-osuk-kpKl" > /dev/null
+unzip -q "../../downloads/zips/Handpose Drawing simplified copy-osuk-kpKl"
 popd > /dev/null
 
 cd ..
