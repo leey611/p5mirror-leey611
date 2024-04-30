@@ -2864,6 +2864,174 @@
     "id": "A3fCQc9XG"
   },
   {
+    "name": "p5-mirror-example-test",
+    "_id": "MxBS3wYtQ",
+    "updatedAt": "2024-04-25T19:30:10.174Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "662aae78add8273b979548f7",
+          "662aae78add8273b979548f8",
+          "662aae78add8273b979548f9"
+        ],
+        "fileType": "folder",
+        "_id": "662aae78add8273b979548f6",
+        "createdAt": "2024-04-25T19:30:10.174Z",
+        "updatedAt": "2024-04-25T19:30:10.174Z",
+        "id": "662aae78add8273b979548f6"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "662aae78add8273b979548f7",
+        "isSelectedFile": false,
+        "createdAt": "2024-04-25T19:30:10.174Z",
+        "updatedAt": "2024-04-25T19:30:10.174Z",
+        "id": "662aae78add8273b979548f7"
+      },
+      {
+        "name": "sketch.js",
+        "content": "// https://editor.p5js.org/leey611/sketches/wseW-x0GP\n// ima-01-yu\nfunction setup() {\n  createCanvas(400, 400);\n  // i updated something\n}\n\nfunction draw() {\n  background(220);\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "662aae78add8273b979548f8",
+        "isSelectedFile": true,
+        "createdAt": "2024-04-25T19:30:10.174Z",
+        "updatedAt": "2024-04-25T19:30:10.174Z",
+        "id": "662aae78add8273b979548f8"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "662aae78add8273b979548f9",
+        "isSelectedFile": false,
+        "createdAt": "2024-04-25T19:30:10.174Z",
+        "updatedAt": "2024-04-25T19:30:10.174Z",
+        "id": "662aae78add8273b979548f9"
+      }
+    ],
+    "createdAt": "2024-04-25T19:26:48.220Z",
+    "id": "MxBS3wYtQ"
+  },
+  {
+    "name": "p5-mirror-example-test",
+    "_id": "XOWKALF76",
+    "updatedAt": "2024-04-25T19:30:10.574Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "662aadf8ea8e573b4cc2406a",
+          "662aadf8ea8e573b4cc2406b",
+          "662aadf8ea8e573b4cc2406c"
+        ],
+        "fileType": "folder",
+        "_id": "662aadf8ea8e573b4cc24069",
+        "createdAt": "2024-04-25T19:30:10.574Z",
+        "updatedAt": "2024-04-25T19:30:10.574Z",
+        "id": "662aadf8ea8e573b4cc24069"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "662aadf8ea8e573b4cc2406a",
+        "isSelectedFile": false,
+        "createdAt": "2024-04-25T19:30:10.574Z",
+        "updatedAt": "2024-04-25T19:30:10.574Z",
+        "id": "662aadf8ea8e573b4cc2406a"
+      },
+      {
+        "name": "sketch.js",
+        "content": "// https://editor.p5js.org/leey611/sketches/wseW-x0GP\n// ima-01-yu\nfunction setup() {\n  createCanvas(400, 400);\n  // i updated something\n}\n\nfunction draw() {\n  background(220);\n}",
+        "children": [],
+        "fileType": "file",
+        "_id": "662aadf8ea8e573b4cc2406b",
+        "isSelectedFile": true,
+        "createdAt": "2024-04-25T19:30:10.574Z",
+        "updatedAt": "2024-04-25T19:30:10.574Z",
+        "id": "662aadf8ea8e573b4cc2406b"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "662aadf8ea8e573b4cc2406c",
+        "isSelectedFile": false,
+        "createdAt": "2024-04-25T19:30:10.574Z",
+        "updatedAt": "2024-04-25T19:30:10.574Z",
+        "id": "662aadf8ea8e573b4cc2406c"
+      }
+    ],
+    "createdAt": "2024-04-25T19:24:41.238Z",
+    "id": "XOWKALF76"
+  },
+  {
+    "name": "p5-mirror-example2",
+    "_id": "TWmy57aER6",
+    "updatedAt": "2024-04-25T19:30:09.838Z",
+    "files": [
+      {
+        "name": "root",
+        "content": "",
+        "children": [
+          "662aae78add8273b979548fb",
+          "662aae78add8273b979548fc",
+          "662aae78add8273b979548fd"
+        ],
+        "fileType": "folder",
+        "_id": "662aae78add8273b979548fa",
+        "createdAt": "2024-04-25T19:30:09.838Z",
+        "updatedAt": "2024-04-25T19:30:09.838Z",
+        "id": "662aae78add8273b979548fa"
+      },
+      {
+        "name": "index.html",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "662aae78add8273b979548fb",
+        "isSelectedFile": false,
+        "createdAt": "2024-04-25T19:30:09.838Z",
+        "updatedAt": "2024-04-25T19:30:09.838Z",
+        "id": "662aae78add8273b979548fb"
+      },
+      {
+        "name": "sketch.js",
+        "content": "// https://editor.p5js.org/leey611/sketches/T5zVm6jEl\n// ims02-yu\n\nlet my = {};\n\nlet palette = \"c2f970-44344f-564d80-98a6d4-d3fcd5\"\n  .split(\"-\")\n  .map((a) => \"#\" + a);\nlet inc = 0.05;\nlet scl = 10;\nlet cols, rows;\nlet zoff = 0;\nlet particles = [];\nlet flowfield;\nconst golden_ratio_conjugate = 0.618033988749895;\nlet h = Math.random();\n\nfunction setup() {\n  my.width = 900;\n  my.height = 900;\n  my.xpos = 0;\n  my.ypos = 0;\n  my.xspeed = 1;\n  my.yspeed = 1;\n  // my.xlen = 0;\n  // my.ylen = 0;\n  my.debug = 1;\n  // my.fullScreenBtn = 0;\n  my.startTime = 0;\n  my.changeTime = 1.0;\n\n  if (!my.debug) {\n    my.width = windowWidth;\n    my.height = windowHeight;\n  }\n  createCanvas(my.width, my.height);\n  //noStroke();\n  makeNewFlowField()\n\n  my.fullScreenBtn = createButton(\"Full Screen\");\n  my.fullScreenBtn.mousePressed(full_screen_action);\n  my.fullScreenBtn.style(\"font-size:42px\");\n\n  my.startTime = millis() / 1000.0;\n\n  new_pos();\n\n  // init_dim();\n}\n\nfunction draw() {\n  let yoff = 0;\n  // describe(\"Initialize y offset for noise, making the particles move by time.\");\n  for (let y = 0; y < rows; y++) {\n    let xoff = 0;\n    for (let x = 0; x < cols; x++) {\n      let index = x + y * cols;\n      let r = noise(xoff, yoff) * 255;\n      let angle = noise(xoff, yoff, zoff) * TWO_PI * 2;\n      let cir = TWO_PI;\n      let mapAng = map(angle, 0, cir * 2, -cir, cir);\n      let v = p5.Vector.fromAngle(mapAng);\n      v.setMag(1);\n      flowfield[index] = v;\n      xoff += inc;\n      // push()\n      // translate(x*scl, y*scl)\n      // rotate(v.heading())\n      // line(0,0,scl,0)\n      // pop()\n      //fill(r)\n      //rect(x*scl, y*scl, scl, scl)\n    }\n    yoff += inc;\n    zoff += 0.0005;\n  }\n  // describe(\n  //   \"Loop through rows and columns and store vector in flowfield array, meaning that accessibility help knowledge spread freely.\"\n  // );\n\n  for (let i = 0; i < particles.length; i++) {\n    particles[i].follow(flowfield);\n    particles[i].update();\n    //particles[i].edges()\n    particles[i].show(i);\n  }\n  // describe(\"Update and display particles\");\n}\n\nfunction new_pos() {\n  my.xpos = random(0, width);\n  my.ypos = random(0, height);\n}\n\nfunction check_time() {\n  let now = millis() / 1000;\n  if (now - my.startTime > my.changeTime) {\n    my.startTime = now;\n    new_pos();\n  }\n}\n\n// function init_dim() {\n//   xlen = width / 3;\n//   ylen = height;\n// }\n\n// From\n// https://editor.p5js.org/jht1493/sketches/5LgILr8RF\n\nfunction full_screen_action() {\n  my.fullScreenBtn.remove();\n  fullscreen(1);\n  let delay = 3000;\n  h = Math.random()\n  setTimeout(ui_present_window, delay);\n}\n\nfunction ui_present_window() {\n  resizeCanvas(windowWidth, windowHeight);\n  background(\"#c3c3c3\");\n  h = Math.random()\n  //setInterval(makeNewFlowField,5000)\n  makeNewFlowField()\n  setInterval(makeNewFlowField,15000)\n}\n\nfunction makeNewFlowField(newH) {\n  background(\"#c3c3c3\");\n  strokeCap(SQUARE);\n  cols = floor(width / scl);\n  rows = floor(height / scl);\n  \n  flowfield = new Array(cols * rows);\n  h = Math.random()\n  // describe(\"Initialize flowfield array\");\n  particles = []\n  for (let i = 0; i < 2000; i++) {\n    if (random() > 0.8) {\n      h += golden_ratio_conjugate;\n      h %= 1;\n      particles.push(new Particle(getNewVec()));\n    } else if (random() < 0.1) {\n      particles.push(new Particle());\n    }\n  }\n}\n\nconst dia = 350;\nfunction getNewVec() {\n  // describe(\n  //   \"Function to get a new random vector within a circular area, symbolizing that time and knowledge will grow forever.\"\n  // );\n  let vec = createVector(random(width), random(height));\n  if (dist(width / 2, height / 2, vec.x, vec.y) < dia) {\n    return vec;\n  }\n  return getNewVec();\n}\n\nfunction Particle(pos) {\n  this.pos = pos || createVector(random(width), random(height));\n  this.vel = createVector(0, 0); //p5.Vector.random2D()//\n  this.acc = createVector(0, 0);\n  this.sw = random() > 0.1 ? random(1, 4) : random(40);\n  this.clr = color(...hsvToRgb(h, 0.6, 0.95));\n  this.maxspeed = 1.3;\n\n  // describe(\n  //   \"Particle object constructor: Set stroke weight and color. Different attributes of the particles manifest diversity.\"\n  // );\n\n  this.update = function () {\n    this.vel.add(this.acc);\n    this.vel.limit(this.maxspeed);\n    this.pos.add(this.vel);\n    this.acc.mult(0);\n\n    if (this.sw > 5) {\n      this.sw *= 0.99;\n    }\n  };\n\n  this.follow = function (vectors) {\n    let x = floor(this.pos.x / scl);\n    let y = floor(this.pos.y / scl);\n    let index = x + y * cols;\n    let force = vectors[index];\n    this.applyForce(force);\n  };\n\n  this.applyForce = function (force) {\n    this.acc.add(force);\n  };\n\n  this.show = function (index) {\n    push();\n    translate(this.pos.x, this.pos.y);\n    //rotate(this.vel.heading())\n    stroke(this.clr);\n    strokeWeight(this.sw)\n    //strokeWeight(this.sw)\n    point(0, 0);\n    //rect(0,0,10,10)\n\n    pop();\n    //stroke(this.clr)\n    //stroke(palette[index%palette.length])\n\n    // fill(this.clr)\n    // rect(this.pos.x, this.pos.y, 10, 10)\n  };\n\n  this.edges = function () {\n    // if (this.pos.x > width) this.pos.x = 0\n    // if (this.pos.x < 0) this.pos.x = width\n    // if (this.pos.y > height) this.pos.y = 0\n    // if (this.pos.y < 0) this.pos.y = height\n    if (dist(width / 2, height / 2, this.pos.x, this.pos.y) > dia) {\n      this.pos = getNewVec();\n    }\n  };\n}\n\nfunction hsvToRgb(h, s, v) {\n  // describe(\"Function to convert HSV color to RGB color\");\n  let h_i = Math.floor(h * 6);\n  let f = h * 6 - h_i;\n  let p = v * (1 - s);\n  let q = v * (1 - f * s);\n  let t = v * (1 - (1 - f) * s);\n\n  let r, g, b;\n\n  if (h_i === 0) {\n    r = v;\n    g = t;\n    b = p;\n  }\n  if (h_i === 1) {\n    r = q;\n    g = v;\n    b = p;\n  }\n  if (h_i === 2) {\n    r = p;\n    g = v;\n    b = t;\n  }\n  if (h_i === 3) {\n    r = p;\n    g = q;\n    b = v;\n  }\n  if (h_i === 4) {\n    r = t;\n    g = p;\n    b = v;\n  }\n  if (h_i === 5) {\n    r = v;\n    g = p;\n    b = q;\n  }\n\n  return [Math.floor(r * 256), Math.floor(g * 256), Math.floor(b * 256)];\n}\n\nfunction mousePressed() {\n  particles = [];\n  for (let i = 0; i < 100; i++) {\n    if (random() > 0.1) {\n      particles.push(new Particle());\n    }\n  }\n  // describe(\"Function to regenerate particles on mouse click\");\n}\n\n// https://editor.p5js.org/jht9629-nyu/sketches/8Iazn1D_P\n// ims black-n white-1\n\n// https://editor.p5js.org/jht9629-nyu/sketches/3VKJ-q8ar\n// ims03-jht scrolling color bars\n\n// forked and modified from https://editor.p5js.org/jht9629-nyu/sketches/Mpgun-Kti\n// https://openprocessing.org/sketch/2135015\n// ims black-n white-1 bounce",
+        "children": [],
+        "fileType": "file",
+        "_id": "662aae78add8273b979548fc",
+        "isSelectedFile": true,
+        "createdAt": "2024-04-25T19:30:09.838Z",
+        "updatedAt": "2024-04-25T19:30:09.838Z",
+        "id": "662aae78add8273b979548fc"
+      },
+      {
+        "name": "style.css",
+        "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+        "children": [],
+        "fileType": "file",
+        "_id": "662aae78add8273b979548fd",
+        "isSelectedFile": false,
+        "createdAt": "2024-04-25T19:30:09.838Z",
+        "updatedAt": "2024-04-25T19:30:09.838Z",
+        "id": "662aae78add8273b979548fd"
+      }
+    ],
+    "createdAt": "2024-04-25T19:26:48.688Z",
+    "id": "TWmy57aER6"
+  },
+  {
     "name": "Pixel positive + slit scan camera",
     "_id": "Qzm9RogB1",
     "updatedAt": "2022-09-26T06:18:16.425Z",

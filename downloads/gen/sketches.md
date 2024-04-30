@@ -1,5 +1,5 @@
 # Sketches for leey611
-60 sketches  
+63 sketches  
 [arduino btn value to p5](https://editor.p5js.org/leey611/sketches/BSYny-hp2)<!-- 2022-11-30T18:55:38.038Z -->  
 [arduino button to add oxgen](https://editor.p5js.org/leey611/sketches/qijOlwpEl)<!-- 2022-12-12T17:35:36.891Z -->  
 [arduino button to add oxgen 2](https://editor.p5js.org/leey611/sketches/qde3Th861)<!-- 2022-12-13T23:51:51.203Z -->  
@@ -38,6 +38,9 @@
 [Likeable lunaria](https://editor.p5js.org/leey611/sketches/b52_lWDUI)<!-- 2024-02-27T01:34:28.935Z -->  
 [Mousy purpose](https://editor.p5js.org/leey611/sketches/JJSDTI5Cvf)<!-- 2023-04-02T15:56:40.566Z -->  
 [Nature of Code 2: Mutual Attraction array copy](https://editor.p5js.org/leey611/sketches/A3fCQc9XG)<!-- 2024-01-06T10:17:40.944Z -->  
+[p5-mirror-example-test](https://editor.p5js.org/leey611/sketches/MxBS3wYtQ)<!-- 2024-04-25T19:30:10.174Z -->  
+[p5-mirror-example-test](https://editor.p5js.org/leey611/sketches/XOWKALF76)<!-- 2024-04-25T19:30:10.574Z -->  
+[p5-mirror-example2](https://editor.p5js.org/leey611/sketches/TWmy57aER6)<!-- 2024-04-25T19:30:09.838Z -->  
 [Pixel positive + slit scan camera](https://editor.p5js.org/leey611/sketches/Qzm9RogB1)<!-- 2022-09-26T06:18:16.425Z -->  
 [pixitest at cck copy](https://editor.p5js.org/leey611/sketches/5n6iEM4kU)<!-- 2023-08-21T21:15:22.227Z -->  
 [Placid fear](https://editor.p5js.org/leey611/sketches/fIeDwrxQf)<!-- 2019-10-10T15:35:46.009Z -->  

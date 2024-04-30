@@ -1,5 +1,5 @@
 # leey611 p5projects
-60 sketches 2024-04-25T17:05:18.094Z
+63 sketches 2024-04-25T19:30:10.574Z
 
 - [Bezier Curve Interactive Tangents copy-ZfRGzFyhK](./p5projects/Bezier%20Curve%20Interactive%20Tangents%20copy-ZfRGzFyhK) [[p5js](https://editor.p5js.org/leey611/sketches/ZfRGzFyhK)]
 - [Cat mind-vKt9wLM44](./p5projects/Cat%20mind-vKt9wLM44) [[p5js](https://editor.p5js.org/leey611/sketches/vKt9wLM44)]
@@ -54,6 +54,9 @@
 - [ims02-yu-T5zVm6jEl](./p5projects/ims02-yu-T5zVm6jEl) [[p5js](https://editor.p5js.org/leey611/sketches/T5zVm6jEl)]
 - [ims03-yu-jtoE5kFtT](./p5projects/ims03-yu-jtoE5kFtT) [[p5js](https://editor.p5js.org/leey611/sketches/jtoE5kFtT)]
 - [interactive self portrait-Lw8O4sJdm](./p5projects/interactive%20self%20portrait-Lw8O4sJdm) [[p5js](https://editor.p5js.org/leey611/sketches/Lw8O4sJdm)]
+- [p5-mirror-example-test-MxBS3wYtQ](./p5projects/p5-mirror-example-test-MxBS3wYtQ) [[p5js](https://editor.p5js.org/leey611/sketches/MxBS3wYtQ)]
+- [p5-mirror-example-test-XOWKALF76](./p5projects/p5-mirror-example-test-XOWKALF76) [[p5js](https://editor.p5js.org/leey611/sketches/XOWKALF76)]
+- [p5-mirror-example2-TWmy57aER6](./p5projects/p5-mirror-example2-TWmy57aER6) [[p5js](https://editor.p5js.org/leey611/sketches/Wmy57aER6)]
 - [pixitest at cck copy-5n6iEM4kU](./p5projects/pixitest%20at%20cck%20copy-5n6iEM4kU) [[p5js](https://editor.p5js.org/leey611/sketches/5n6iEM4kU)]
 - [real-time-social-hw1 copy-JwVzj\_ylW](./p5projects/real-time-social-hw1%20copy-JwVzj_ylW) [[p5js](https://editor.p5js.org/leey611/sketches/JwVzj_ylW)]
 - [real-time-social-hw1-AVwWMsxTQI](./p5projects/real-time-social-hw1-AVwWMsxTQI) [[p5js](https://editor.p5js.org/leey611/sketches/VwWMsxTQI)]

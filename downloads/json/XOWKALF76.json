@@ -1,0 +1,64 @@
+{
+  "name": "p5-mirror-example-test",
+  "serveSecure": false,
+  "_id": "XOWKALF76",
+  "user": {
+    "_id": "5d9f4fa4e89a30001e79d5fc",
+    "username": "leey611",
+    "id": "5d9f4fa4e89a30001e79d5fc"
+  },
+  "updatedAt": "2024-04-25T19:30:10.574Z",
+  "files": [
+    {
+      "name": "root",
+      "content": "",
+      "children": [
+        "662aadf8ea8e573b4cc2406a",
+        "662aadf8ea8e573b4cc2406b",
+        "662aadf8ea8e573b4cc2406c"
+      ],
+      "fileType": "folder",
+      "_id": "662aadf8ea8e573b4cc24069",
+      "createdAt": "2024-04-25T19:30:10.574Z",
+      "updatedAt": "2024-04-25T19:30:10.574Z",
+      "id": "662aadf8ea8e573b4cc24069"
+    },
+    {
+      "name": "index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/addons/p5.sound.min.js\"></script>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n    <meta charset=\"utf-8\" />\n\n  </head>\n  <body>\n    <main>\n    </main>\n    <script src=\"sketch.js\"></script>\n  </body>\n</html>\n",
+      "children": [],
+      "fileType": "file",
+      "_id": "662aadf8ea8e573b4cc2406a",
+      "isSelectedFile": false,
+      "createdAt": "2024-04-25T19:30:10.574Z",
+      "updatedAt": "2024-04-25T19:30:10.574Z",
+      "id": "662aadf8ea8e573b4cc2406a"
+    },
+    {
+      "name": "sketch.js",
+      "content": "// https://editor.p5js.org/leey611/sketches/wseW-x0GP\n// ima-01-yu\nfunction setup() {\n  createCanvas(400, 400);\n  // i updated something\n}\n\nfunction draw() {\n  background(220);\n}",
+      "children": [],
+      "fileType": "file",
+      "_id": "662aadf8ea8e573b4cc2406b",
+      "isSelectedFile": true,
+      "createdAt": "2024-04-25T19:30:10.574Z",
+      "updatedAt": "2024-04-25T19:30:10.574Z",
+      "id": "662aadf8ea8e573b4cc2406b"
+    },
+    {
+      "name": "style.css",
+      "content": "html, body {\n  margin: 0;\n  padding: 0;\n}\ncanvas {\n  display: block;\n}\n",
+      "children": [],
+      "fileType": "file",
+      "_id": "662aadf8ea8e573b4cc2406c",
+      "isSelectedFile": false,
+      "createdAt": "2024-04-25T19:30:10.574Z",
+      "updatedAt": "2024-04-25T19:30:10.574Z",
+      "id": "662aadf8ea8e573b4cc2406c"
+    }
+  ],
+  "createdAt": "2024-04-25T19:24:41.238Z",
+  "slug": "p5-mirror-example-test",
+  "__v": 0,
+  "id": "XOWKALF76"
+}
